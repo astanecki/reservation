@@ -1,17 +1,36 @@
 <template>
   <div class="container">
     <div>
-      <ReservationCard>
-        <Calendar />
-      </ReservationCard>
+      <ReservationForm
+        :price="price"
+        :currency="currency"
+        :rating="rating"
+        :dateFrom="dateFrom"
+        :dateTo="dateTo"
+        :ratingQuantity="ratingQuantity"
+      />
     </div>
   </div>
 </template>
 
 <script>
-// import ReservationCard from "~/components/ReservationCard";
+import ReservationForm from "~/components/ReservationForm";
+
 export default {
-  // components: {ReservationCard}
+  components: {
+    ReservationForm,
+  },
+
+  data() {
+    return {
+      price: 298,
+      currency: 'zł',
+      rating: 4.5,
+      ratingQuantity: 123,
+      dateFrom: '2017-03-16',
+      dateTo: '2017-03-20',
+    };
+  },
 }
 </script>
 
