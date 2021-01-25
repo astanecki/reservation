@@ -71,5 +71,10 @@ export default {
     border: 1px solid #c6c6c6;
     margin-bottom: 15px;
   }
+
+  &__rating-quantity {
+    font-size: 12px;
+    margin-top: 2px;
+  }
 }
 </style>

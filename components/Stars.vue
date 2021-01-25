@@ -37,6 +37,7 @@ export default {
 .stars {
   &--filled {
     color: #006600;
+    margin-right: 1px;
   }
 }
 </style>

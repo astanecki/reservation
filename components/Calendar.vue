@@ -14,11 +14,17 @@
             v-on="inputEvents.start"
             readonly
           />
+          <span class="calendar-wrapper__arrow">&#8594;</span>
           <input
             :value="labels.checkOut"
             v-on="inputEvents.end"
             readonly
           />
+        </div>
+
+        <div class="calendar-wrapper__summary">
+          <span>{{ summaryInputValue }}</span>
+          <button @click="onClearClicked">{{ labels.clear }}</button>
         </div>
       </template>
     </v-date-picker>
@@ -42,8 +48,9 @@ export default {
       labels: {
         // TODO i18n
         dates: 'Dates',
-        checkIn: 'Check in',
-        checkOut: 'Check out',
+        checkIn: 'Check In',
+        checkOut: 'Check Out',
+        clear: 'Clear',
       },
       range: {
         start: '',
@@ -52,10 +59,22 @@ export default {
     };
   },
 
+  computed: {
+    summaryInputValue() {
+      return `${this.range.start.toLocaleDateString()} - ${this.range.end.toLocaleDateString()}`;
+    },
+  },
+
   mounted() {
     this.range.start = new Date(this.dateFrom);
     this.range.end = new Date(this.dateTo);
   },
+
+  methods: {
+    onClearClicked() {
+
+    },
+  }
 };
 </script>
 <style lang="scss" scoped>
@@ -75,6 +94,14 @@ export default {
     padding: 4px;
     display: flex;
     border: 1px solid #c6c6c6;
+    margin-bottom: 15px;
+  }
+
+  &__arrow {
+    font-size: 25px;
+    margin-bottom: 7px;
+    line-height: 15px;
+    margin-right: 20px;
   }
 
   input {
@@ -82,6 +109,7 @@ export default {
     font-size: 15px;
     width: 50%;
 
+    line-height: 15px;
     background-color: transparent;
     border: 0;
 
