@@ -1,6 +1,12 @@
 import { mount } from "@vue/test-utils";
 import Calendar from "@/components/Calendar.vue";
 
+// todo add to jest configuration not to add Vue.use in each case
+import Vue from 'vue';
+import VCalendar from 'v-calendar';
+
+Vue.use(VCalendar);
+
 describe("Calendar", () => {
   const requiredProps = {
     dateFrom: "2020-01-11",
