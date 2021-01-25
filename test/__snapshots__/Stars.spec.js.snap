@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Stars should be mounted properly when 0 given 1`] = `
+<div
+  class="stars"
+>
+  ☆☆☆☆☆
+</div>
+`;
+
+exports[`Stars should be mounted properly when 1 given 1`] = `
+<div
+  class="stars"
+>
+  <span
+    class="stars--filled"
+  >
+    ★
+  </span>
+  ☆☆☆☆
+</div>
+`;
+
+exports[`Stars should be mounted properly when 5 given 1`] = `
+<div
+  class="stars"
+>
+  <span
+    class="stars--filled"
+  >
+    ★
+  </span>
+  <span
+    class="stars--filled"
+  >
+    ★
+  </span>
+  <span
+    class="stars--filled"
+  >
+    ★
+  </span>
+  <span
+    class="stars--filled"
+  >
+    ★
+  </span>
+  <span
+    class="stars--filled"
+  >
+    ★
+  </span>
+</div>
+`;

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Calendar should match initial snapshot 1`] = `
+<div
+  class="calendar-wrapper"
+>
+  <span
+    class="calendar-wrapper__dates-label"
+  >
+    Dates
+  </span>
+   
+  <!---->
+</div>
+`;

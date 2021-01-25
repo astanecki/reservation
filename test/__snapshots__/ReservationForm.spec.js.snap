@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReservationForm should match snapshot when props given 1`] = `
+<div
+  class="reservation-card"
+>
+  <label
+    class="reservation-card__price"
+  >
+    298 zł
+  </label>
+   
+  <div
+    class="reservation-card__rating"
+  >
+    <div
+      class="reservation-card__rating-stars"
+    >
+      <div
+        class="stars"
+      >
+        <span
+          class="stars--filled"
+        >
+          ★
+        </span>
+        <span
+          class="stars--filled"
+        >
+          ★
+        </span>
+        <span
+          class="stars--filled"
+        >
+          ★
+        </span>
+        <span
+          class="stars--filled"
+        >
+          ★
+        </span>
+        ☆
+      </div>
+    </div>
+     
+    <div
+      class="reservation-card__rating-quantity"
+    >
+      123
+    </div>
+  </div>
+   
+  <div
+    class="reservation-card__divider"
+  />
+   
+  <div
+    class="calendar-wrapper"
+  >
+    <span
+      class="calendar-wrapper__dates-label"
+    >
+      Dates
+    </span>
+     
+    <!---->
+  </div>
+</div>
+`;
