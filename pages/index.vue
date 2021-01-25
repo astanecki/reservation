@@ -1,34 +1,18 @@
 <template>
   <div class="container">
     <div>
-      <Logo />
-      <h1 class="title">
-        reservation
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
+      <ReservationCard>
+        <Calendar />
+      </ReservationCard>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+// import ReservationCard from "~/components/ReservationCard";
+export default {
+  // components: {ReservationCard}
+}
 </script>
 
 <style>
