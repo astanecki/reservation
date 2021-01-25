@@ -1,20 +1,25 @@
 <template>
   <div class="calendar-wrapper">
     <span class="calendar-wrapper__dates-label">{{ labels.dates }}</span>
+
     <v-date-picker
       v-if="range.start && range.end"
       v-model="range"
       is-range
     >
       <template v-slot="{ inputValue, inputEvents }">
-        <input
-          :value="labels.checkIn"
-          v-on="inputEvents.start"
-        />
-        <input
-          :value="labels.checkOut"
-          v-on="inputEvents.end"
-        />
+        <div class="calendar-wrapper__inputs-wrapper">
+          <input
+            :value="labels.checkIn"
+            v-on="inputEvents.start"
+            readonly
+          />
+          <input
+            :value="labels.checkOut"
+            v-on="inputEvents.end"
+            readonly
+          />
+        </div>
       </template>
     </v-date-picker>
   </div>
@@ -64,6 +69,25 @@ export default {
     color: #848484;
     font-size: 13px;
     margin-bottom: 5px;
+  }
+
+  &__inputs-wrapper {
+    padding: 4px;
+    display: flex;
+    border: 1px solid #c6c6c6;
+  }
+
+  input {
+    cursor: pointer;
+    font-size: 15px;
+    width: 50%;
+
+    background-color: transparent;
+    border: 0;
+
+    &:focus {
+      outline: none;
+    }
   }
 }
 </style>
