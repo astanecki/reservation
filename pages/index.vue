@@ -1,15 +1,13 @@
 <template>
   <div class="container">
-    <div>
-      <ReservationForm
-        :price="price"
-        :currency="currency"
-        :rating="rating"
-        :dateFrom="dateFrom"
-        :dateTo="dateTo"
-        :ratingQuantity="ratingQuantity"
-      />
-    </div>
+    <ReservationForm
+      :price="price"
+      :currency="currency"
+      :rating="rating"
+      :dateFrom="dateFrom"
+      :dateTo="dateTo"
+      :ratingQuantity="ratingQuantity"
+    />
   </div>
 </template>
 

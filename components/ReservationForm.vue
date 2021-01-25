@@ -11,7 +11,6 @@
     />
   </ReservationCard>
 </template>
-
 <script>
 import Calendar from "~/components/Calendar";
 import ReservationCard from "~/components/ReservationCard";

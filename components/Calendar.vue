@@ -24,7 +24,7 @@
 
         <div class="calendar-wrapper__summary">
           <span>{{ summaryInputValue }}</span>
-          <button @click="onClearClicked">{{ labels.clear }}</button>
+          <button @click="setDefaultRange">{{ labels.clear }}</button>
         </div>
       </template>
     </v-date-picker>
@@ -66,13 +66,16 @@ export default {
   },
 
   mounted() {
-    this.range.start = new Date(this.dateFrom);
-    this.range.end = new Date(this.dateTo);
+    this.setDefaultRange();
   },
 
   methods: {
-    onClearClicked() {
-
+    /**
+     * @function
+     */
+    setDefaultRange() {
+      this.range.start = new Date(this.dateFrom);
+      this.range.end = new Date(this.dateTo);
     },
   }
 };
