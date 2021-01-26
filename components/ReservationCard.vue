@@ -20,7 +20,10 @@ import Stars from "~/components/Stars";
 export default {
   name: 'ReservationCard',
 
-  components: {Stars},
+  components: {
+    Stars,
+  },
+
   props: {
     price: {
       type: Number,

@@ -5,6 +5,9 @@
     :rating="rating"
     :ratingQuantity="ratingQuantity"
   >
+    <DatesInput
+      @click="onInputClicked"
+    />
     <Calendar
       :dateFrom="dateFrom"
       :dateTo="dateTo"
@@ -14,13 +17,15 @@
 <script>
 import Calendar from "~/components/Calendar";
 import ReservationCard from "~/components/ReservationCard";
+import DatesInput from "~/components/DatesInput";
 
 export default {
   name: 'ReservationForm',
 
   components: {
-    Calendar,
     ReservationCard,
+    DatesInput,
+    Calendar,
   },
 
   props: {
@@ -41,6 +46,12 @@ export default {
     },
     ratingQuantity: {
       type: Number,
+    }
+  },
+
+  methods: {
+    onInputClicked() {
+      console.log(`*********onInputClicked`, );
     }
   }
 }

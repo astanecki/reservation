@@ -3,14 +3,6 @@
     <Nuxt />
   </div>
 </template>
-<script>
-import Vue from 'vue';
-import VCalendar from 'v-calendar';
-
-Vue.use(VCalendar);
-
-export default {};
-</script>
 <style>
 html {
   font-family:
