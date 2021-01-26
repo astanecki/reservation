@@ -25,17 +25,18 @@ import CONFIG from '~/config/config.json';
 export default {
   name: 'MonthSelector',
 
-  data() {
-    return {
-      currentDate: moment(),
-    };
+  props: {
+    value: {
+      type: Object,
+      required: true,
+    },
   },
 
   computed: {
     headerLabel() {
       const { YEAR, MONTH } = CONFIG.DATE_FORMATS;
 
-      return `${this.currentDate.format(MONTH)} ${this.currentDate.format(YEAR)}`;
+      return `${this.value.format(MONTH)} ${this.value.format(YEAR)}`;
     },
   },
 
@@ -45,9 +46,7 @@ export default {
      * @param {Number} direction
      */
     changeMonth(direction) {
-      this.currentDate = moment(this.currentDate).add(direction, 'month');
-
-      this.$emit('monthChanged', this.currentDate);
+      this.$emit('input', moment(this.value).add(direction, 'month'));
     },
   }
 }
@@ -61,7 +60,7 @@ export default {
   color: white;
   font-weight: 700;
   background-color: #17d09e;
-  padding: 10px 15px;
+  padding: 10px;
 
   &__arrow {
     cursor: pointer;

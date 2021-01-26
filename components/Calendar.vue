@@ -1,10 +1,15 @@
 <template>
   <div class="calendar-wrapper">
-    <MonthSelector />
-    <Days />
+    <MonthSelector v-model="currentDate" />
+    <Days
+      :date="currentDate"
+      @dayClicked="onDayClicked"
+    />
   </div>
 </template>
 <script>
+import moment from 'moment';
+
 import MonthSelector from '~/components/MonthSelector';
 import Days from '~/components/Days';
 
@@ -27,20 +32,14 @@ export default {
 
   data() {
     return {
-
+      currentDate: moment(),
     };
   },
 
-  computed: {
-
-  },
-
-  mounted() {
-
-  },
-
   methods: {
+    onDayClicked() {
 
+    }
   }
 };
 </script>
