@@ -161,12 +161,6 @@ export default {
       border-radius: 50%;
     }
 
-    &--selected {
-      color: white;
-      background-color: #17d09e;
-      border-radius: 50% 0 0 50%;
-    }
-
     &--not-current-month {
       color: #c6c6c6;
       pointer-events: none;
@@ -181,6 +175,12 @@ export default {
       color: white;
       background-color: #17d09e;
       border-radius: 50%;
+    }
+
+    #{$root}  &--selected {
+      color: white;
+      background-color: #17d09e;
+      border-radius: 50% 0 0 50%;
     }
 
     #{$root} &--hovered-last {
