@@ -13,7 +13,7 @@
       <span
         v-for="day in currentMonthDays"
         class="days__list-of-days-item"
-        :class="{ 'days__list-of-days-item--today': day === currentDayIndex }"
+        :class="{ 'days__list-of-days-item--today': isCurrentMonthShown && day === currentDayIndex}"
       >
         {{ day }}
       </span>
@@ -28,6 +28,8 @@
 </template>
 <script>
 import moment from 'moment';
+
+import CONFIG from '~/config/config.json';
 
 export default {
   name: 'Days',
@@ -70,7 +72,11 @@ export default {
     },
 
     currentDayIndex() {
-      return moment(this.date).days();
+      return moment(new Date()).days();
+    },
+
+    isCurrentMonthShown() {
+      return moment(new Date()).format(CONFIG.DATE_FORMATS.MONTH) === moment(this.date).format(CONFIG.DATE_FORMATS.MONTH);
     }
   }
 }
