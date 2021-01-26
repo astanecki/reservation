@@ -77,7 +77,7 @@ export default {
 
     &:focus {
       outline: none;
-      background-color: #99EAEA;
+      background-color: #8be7ce;
     }
   }
 }

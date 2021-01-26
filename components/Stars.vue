@@ -37,7 +37,7 @@ export default {
 <style lang="scss">
 .stars {
   &--filled {
-    color: #006600;
+    color: #12a67e;
     margin-right: 1px;
   }
 }

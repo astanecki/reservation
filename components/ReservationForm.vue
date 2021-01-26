@@ -10,9 +10,10 @@
     />
     <Calendar
       v-if="chosenInputType"
-      :dateFrom="dateFrom"
-      :dateTo="dateTo"
+      @rangeChosen="onRangeChosen"
     />
+
+    {{ dateRange }}
   </ReservationCard>
 </template>
 <script>
@@ -32,6 +33,7 @@ export default {
   data() {
     return {
       chosenInputType: '',
+      dateRange: null,
     };
   },
 
@@ -59,7 +61,12 @@ export default {
   methods: {
     onInputClicked(type) {
       this.chosenInputType = type;
-    }
+    },
+
+    onRangeChosen(data) {
+      this.dateRange = data;
+      this.chosenInputType = null;
+    },
   }
 }
 </script>

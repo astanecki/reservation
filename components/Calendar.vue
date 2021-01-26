@@ -3,7 +3,7 @@
     <MonthSelector v-model="currentDate" />
     <Days
       :date="currentDate"
-      @dayClicked="onDayClicked"
+      @rangeChosen="data => $emit('rangeChosen', data)"
     />
   </div>
 </template>
@@ -19,28 +19,11 @@ export default {
     Days,
   },
 
-  props: {
-    dateFrom: {
-      type: String,
-      required: true,
-    },
-    dateTo: {
-      type: String,
-      required: true,
-    }
-  },
-
   data() {
     return {
       currentDate: moment(),
     };
   },
-
-  methods: {
-    onDayClicked() {
-
-    }
-  }
 };
 </script>
 <style lang="scss" scoped>
