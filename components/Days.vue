@@ -17,7 +17,7 @@
           'days__list-of-days-item--today': isCurrentMonthShown && day === currentDayIndex,
           'days__list-of-days-item--selected': day === startDay || day === endDay,
           'days__list-of-days-item--hovered': day >= startDay && day < lastDayWithHoverBackground,
-          'days__list-of-days-item--hovered-last': day === lastDayWithHoverBackground && day !== startDay
+          'days__list-of-days-item--hovered-last': day === lastDayWithHoverBackground && day !== startDay && day >= startDay
         }"
         @mouseover="onMouseOver(day)"
         @click="onDayClicked(day)"
@@ -61,6 +61,7 @@ export default {
     date() {
       this.startDay = null;
       this.endDay = null;
+      this.lastDayWithHoverBackground = null;
     },
   },
 
