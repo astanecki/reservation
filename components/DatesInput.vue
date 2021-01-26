@@ -8,12 +8,14 @@
       <input
         :value="labels.checkIn"
         @click="$emit('click', INPUT_TYPES.CHECK_IN)"
+        @blur="$emit('blur')"
         readonly
       />
       <span class="dates-input__arrow">&#8594;</span>
       <input
         :value="labels.checkOut"
         @click="$emit('click', INPUT_TYPES.CHECK_OUT)"
+        @blur="$emit('blur')"
         readonly
       />
     </div>

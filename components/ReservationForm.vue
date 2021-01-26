@@ -7,6 +7,7 @@
   >
     <DatesInput
       @click="onInputClicked"
+      @blur="onInputClicked(null)"
     />
     <Calendar
       :dateFrom="dateFrom"
@@ -26,6 +27,12 @@ export default {
     ReservationCard,
     DatesInput,
     Calendar,
+  },
+
+  data() {
+    return {
+      chosenInputType: '',
+    };
   },
 
   props: {
@@ -50,8 +57,9 @@ export default {
   },
 
   methods: {
-    onInputClicked() {
-      console.log(`*********onInputClicked`, );
+    onInputClicked(type) {
+      this.chosenInputType = type;
+      console.log(`*********onInputClicked`, type);
     }
   }
 }

@@ -46,7 +46,12 @@ export default {
 </script>
 <style lang="scss" scoped>
 .calendar-wrapper {
+  $root: &;
+
   display: flex;
   flex-direction: column;
+  width: 100%;
+  height: 250px;
+  position: relative;
 }
 </style>
