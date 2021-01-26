@@ -7,9 +7,9 @@
   >
     <DatesInput
       @click="onInputClicked"
-      @blur="onInputClicked(null)"
     />
     <Calendar
+      v-if="chosenInputType"
       :dateFrom="dateFrom"
       :dateTo="dateTo"
     />
@@ -59,7 +59,6 @@ export default {
   methods: {
     onInputClicked(type) {
       this.chosenInputType = type;
-      console.log(`*********onInputClicked`, type);
     }
   }
 }

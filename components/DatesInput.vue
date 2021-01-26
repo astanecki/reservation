@@ -1,8 +1,8 @@
 <template>
   <div class="dates-input">
-    <span class="dates-input__label">
+    <div class="dates-input__label">
       {{ labels.dates }}
-    </span>
+    </div>
 
     <div class="dates-input__wrapper">
       <input
@@ -44,7 +44,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .dates-input {
-  &__dates-label {
+  &__label {
     text-align: left;
     font-weight: 700;
     color: #848484;
