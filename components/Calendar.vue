@@ -24,9 +24,12 @@ export default {
 
   data() {
     return {
+      /**
+       * @type {String}
+       */
       month: moment(),
     };
-  }
+  },
 };
 </script>
 <style lang="scss" scoped>

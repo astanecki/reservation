@@ -46,9 +46,12 @@ export default {
 </script>
 <style lang="scss" scoped>
 .reservation-card {
+  display: flex;
+  flex-direction: column;
+
   width: 330px;
   height: 575px;
-  border: 1px solid #c6c6c6;
+  sborder: 1px solid #c6c6c6;
   border-radius: 5px;
   padding: 25px;
   background-color: #e6e6e6;

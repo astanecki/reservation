@@ -16,12 +16,15 @@
     />
 
     {{ dateRange }}
+
+    <ClearButton @click.native="dateRange = {}"/>
   </ReservationCard>
 </template>
 <script>
-import Calendar from "~/components/Calendar";
-import ReservationCard from "~/components/ReservationCard";
-import DatesInput, { INPUT_TYPES } from "~/components/DatesInput";
+import Calendar from '~/components/Calendar';
+import ReservationCard from '~/components/ReservationCard';
+import DatesInput, { INPUT_TYPES } from '~/components/DatesInput';
+import ClearButton from '~/components/ClearButton';
 
 export default {
   name: 'ReservationForm',
@@ -30,12 +33,13 @@ export default {
     ReservationCard,
     DatesInput,
     Calendar,
+    ClearButton,
   },
 
   data() {
     return {
       chosenInputType: '',
-      dateRange: null,
+      dateRange: {},
     };
   },
 
