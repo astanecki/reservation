@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MonthSelector should match initial snapshot 1`] = `
+<div
+  class="month-selector"
+>
+  <span
+    class="month-selector__arrow"
+  >
+    
+    ‹
+  
+  </span>
+   
+  <span
+    class="month-selector__header"
+  >
+    
+    January 2000
+  
+  </span>
+   
+  <span
+    class="month-selector__arrow"
+  >
+    
+    ›
+  
+  </span>
+</div>
+`;

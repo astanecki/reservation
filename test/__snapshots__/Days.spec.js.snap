@@ -1,0 +1,285 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Days snapshots should match initial snapshot 1`] = `
+<div
+  class="days"
+>
+  <div
+    class="days__names"
+  >
+    <span>
+      Sun
+    </span>
+    <span>
+      Mon
+    </span>
+    <span>
+      Tue
+    </span>
+    <span>
+      Wed
+    </span>
+    <span>
+      Thu
+    </span>
+    <span>
+      Fri
+    </span>
+    <span>
+      Sat
+    </span>
+  </div>
+   
+  <div
+    class="days__list-of-days"
+  >
+    <span
+      class="days__list-of-days-item days__list-of-days-item--not-current-month"
+    >
+      
+      27
+    
+    </span>
+    <span
+      class="days__list-of-days-item days__list-of-days-item--not-current-month"
+    >
+      
+      28
+    
+    </span>
+    <span
+      class="days__list-of-days-item days__list-of-days-item--not-current-month"
+    >
+      
+      29
+    
+    </span>
+     
+    <span
+      class="days__list-of-days-item"
+    >
+      
+      1
+    
+    </span>
+    <span
+      class="days__list-of-days-item"
+    >
+      
+      2
+    
+    </span>
+    <span
+      class="days__list-of-days-item days__list-of-days-item--today"
+    >
+      
+      3
+    
+    </span>
+    <span
+      class="days__list-of-days-item"
+    >
+      
+      4
+    
+    </span>
+    <span
+      class="days__list-of-days-item"
+    >
+      
+      5
+    
+    </span>
+    <span
+      class="days__list-of-days-item"
+    >
+      
+      6
+    
+    </span>
+    <span
+      class="days__list-of-days-item"
+    >
+      
+      7
+    
+    </span>
+    <span
+      class="days__list-of-days-item"
+    >
+      
+      8
+    
+    </span>
+    <span
+      class="days__list-of-days-item"
+    >
+      
+      9
+    
+    </span>
+    <span
+      class="days__list-of-days-item"
+    >
+      
+      10
+    
+    </span>
+    <span
+      class="days__list-of-days-item"
+    >
+      
+      11
+    
+    </span>
+    <span
+      class="days__list-of-days-item"
+    >
+      
+      12
+    
+    </span>
+    <span
+      class="days__list-of-days-item"
+    >
+      
+      13
+    
+    </span>
+    <span
+      class="days__list-of-days-item"
+    >
+      
+      14
+    
+    </span>
+    <span
+      class="days__list-of-days-item"
+    >
+      
+      15
+    
+    </span>
+    <span
+      class="days__list-of-days-item"
+    >
+      
+      16
+    
+    </span>
+    <span
+      class="days__list-of-days-item"
+    >
+      
+      17
+    
+    </span>
+    <span
+      class="days__list-of-days-item"
+    >
+      
+      18
+    
+    </span>
+    <span
+      class="days__list-of-days-item"
+    >
+      
+      19
+    
+    </span>
+    <span
+      class="days__list-of-days-item"
+    >
+      
+      20
+    
+    </span>
+    <span
+      class="days__list-of-days-item"
+    >
+      
+      21
+    
+    </span>
+    <span
+      class="days__list-of-days-item"
+    >
+      
+      22
+    
+    </span>
+    <span
+      class="days__list-of-days-item"
+    >
+      
+      23
+    
+    </span>
+    <span
+      class="days__list-of-days-item"
+    >
+      
+      24
+    
+    </span>
+    <span
+      class="days__list-of-days-item"
+    >
+      
+      25
+    
+    </span>
+    <span
+      class="days__list-of-days-item"
+    >
+      
+      26
+    
+    </span>
+    <span
+      class="days__list-of-days-item"
+    >
+      
+      27
+    
+    </span>
+    <span
+      class="days__list-of-days-item"
+    >
+      
+      28
+    
+    </span>
+    <span
+      class="days__list-of-days-item"
+    >
+      
+      29
+    
+    </span>
+    <span
+      class="days__list-of-days-item"
+    >
+      
+      30
+    
+    </span>
+    <span
+      class="days__list-of-days-item"
+    >
+      
+      31
+    
+    </span>
+     
+    <span
+      class="days__list-of-days-item days__list-of-days-item--not-current-month"
+    >
+      
+      1
+    
+    </span>
+  </div>
+</div>
+`;
