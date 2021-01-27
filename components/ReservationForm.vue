@@ -6,11 +6,13 @@
     :ratingQuantity="ratingQuantity"
   >
     <DatesInput
+      :focusedInputType="chosenInputType"
       @click="onInputClicked"
     />
     <Calendar
       v-if="chosenInputType"
-      @rangeChosen="onRangeChosen"
+      @startRangeChosen="onStartRangeChosen"
+      @endRangeChosen="onRangeChosen"
     />
 
     {{ dateRange }}
@@ -19,7 +21,7 @@
 <script>
 import Calendar from "~/components/Calendar";
 import ReservationCard from "~/components/ReservationCard";
-import DatesInput from "~/components/DatesInput";
+import DatesInput, { INPUT_TYPES } from "~/components/DatesInput";
 
 export default {
   name: 'ReservationForm',
@@ -59,13 +61,28 @@ export default {
   },
 
   methods: {
+    /**
+     * @function
+     * @param {String} type
+     */
     onInputClicked(type) {
-      this.chosenInputType = type;
+      this.chosenInputType = type === this.chosenInputType ? '' : type;
     },
 
-    onRangeChosen(data) {
-      this.dateRange = data;
+    /**
+     * @function
+     * @param {Object} date
+     */
+    onRangeChosen(date) {
+      this.dateRange = date;
       this.chosenInputType = null;
+    },
+
+    /**
+     * @function
+     */
+    onStartRangeChosen() {
+      this.chosenInputType = INPUT_TYPES.CHECK_OUT;
     },
   }
 }

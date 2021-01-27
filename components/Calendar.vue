@@ -1,9 +1,12 @@
 <template>
   <div class="calendar-wrapper">
-    <MonthSelector v-model="currentDate" />
+    <MonthSelector
+      v-model="month"
+    />
     <Days
-      :date="currentDate"
-      @rangeChosen="data => $emit('rangeChosen', data)"
+      :month="month"
+      @startRangeChosen="$emit('startRangeChosen')"
+      @endRangeChosen="data => $emit('endRangeChosen', data)"
     />
   </div>
 </template>
@@ -21,9 +24,9 @@ export default {
 
   data() {
     return {
-      currentDate: moment(),
+      month: moment(),
     };
-  },
+  }
 };
 </script>
 <style lang="scss" scoped>

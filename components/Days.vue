@@ -42,7 +42,7 @@ export default {
   name: 'Days',
 
   props: {
-    date: {
+    month: {
       type: Object,
       required: true,
     },
@@ -58,7 +58,7 @@ export default {
   },
 
   watch: {
-    date() {
+    month() {
       this.startDay = null;
       this.endDay = null;
       this.lastDayWithHoverBackground = null;
@@ -67,7 +67,7 @@ export default {
 
   computed: {
     previousMonthDays() {
-      const number = moment(this.date).add(-1, 'month').daysInMonth();
+      const number = moment(this.month).add(-1, 'month').daysInMonth();
       const allDaysArray = Array.from(Array(number + 1).keys());
 
       return allDaysArray.slice(allDaysArray.length - this.firstDayIndex, allDaysArray.length);
@@ -78,15 +78,15 @@ export default {
     },
 
     currentMonthDays() {
-      return moment(this.date).daysInMonth();
+      return moment(this.month).daysInMonth();
     },
 
     firstDayIndex() {
-      return moment(this.date).startOf('month').day()
+      return moment(this.month).startOf('month').day()
     },
 
     lastDayIndex() {
-      return moment(this.date).endOf('month').day();
+      return moment(this.month).endOf('month').day();
     },
 
     currentDayIndex() {
@@ -94,7 +94,7 @@ export default {
     },
 
     isCurrentMonthShown() {
-      return moment(new Date()).format(CONFIG.DATE_FORMATS.MONTH) === moment(this.date).format(CONFIG.DATE_FORMATS.MONTH);
+      return moment(new Date()).format(CONFIG.DATE_FORMATS.MONTH) === moment(this.month).format(CONFIG.DATE_FORMATS.MONTH);
     }
   },
 
@@ -105,15 +105,34 @@ export default {
      */
     onDayClicked(day) {
       if (!this.startDay) {
-        this.startDay = day;
-      } else {
-        this.endDay = day;
-
-        this.$emit('rangeChosen', {
-          start: this.startDay,
-          end: this.endDay
-        });
+        this.onStartRangeChosen(day);
+      } else if (day > this.startDay) {
+        this.onEndRangeChosen(day);
       }
+    },
+
+    /**
+     * @function
+     * @param {String} day
+     */
+    onStartRangeChosen(day) {
+      this.startDay = day;
+
+      this.$emit('startRangeChosen');
+    },
+
+    /**
+     * @function
+     * @param {String} day
+     */
+    onEndRangeChosen(day) {
+      this.endDay = day;
+
+      this.$emit('endRangeChosen', {
+        month: this.month.format(CONFIG.DATE_FORMATS.SUBMIT),
+        start: this.startDay,
+        end: this.endDay
+      });
     },
 
     /**

@@ -1,6 +1,7 @@
 {
   "DATE_FORMATS": {
     "MONTH": "MMMM",
-    "YEAR": "Y"
+    "YEAR": "Y",
+    "SUBMIT": "YYYY-MM"
   }
 }
