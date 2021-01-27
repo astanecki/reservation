@@ -4,6 +4,7 @@
 <style lang="scss" scoped>
 .clear-button {
   align-self: flex-end;
+
   border: 1px solid #c6c6c6;
   border-radius: 5px;
   background-color: indianred;

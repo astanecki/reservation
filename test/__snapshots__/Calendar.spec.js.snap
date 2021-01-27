@@ -3,13 +3,366 @@
 exports[`Calendar should match initial snapshot 1`] = `
 <div
   class="calendar-wrapper"
+  datefrom="2020-01-11"
+  dateto="2021-01-11"
 >
-  <span
-    class="calendar-wrapper__dates-label"
+  <div
+    class="month-selector"
   >
-    Dates
-  </span>
+    <span
+      class="month-selector__arrow"
+    >
+      
+    ‹
+  
+    </span>
+     
+    <span
+      class="month-selector__header"
+    >
+      
+    January 2000
+  
+    </span>
+     
+    <span
+      class="month-selector__arrow"
+    >
+      
+    ›
+  
+    </span>
+  </div>
    
-  <!---->
+  <div
+    class="days"
+  >
+    <div
+      class="days__names"
+    >
+      <span>
+        Sun
+      </span>
+      <span>
+        Mon
+      </span>
+      <span>
+        Tue
+      </span>
+      <span>
+        Wed
+      </span>
+      <span>
+        Thu
+      </span>
+      <span>
+        Fri
+      </span>
+      <span>
+        Sat
+      </span>
+    </div>
+     
+    <div
+      class="days__list-of-days"
+    >
+      <span
+        class="days__list-of-days-item days__list-of-days-item--not-current-month"
+      >
+        
+      26
+    
+      </span>
+      <span
+        class="days__list-of-days-item days__list-of-days-item--not-current-month"
+      >
+        
+      27
+    
+      </span>
+      <span
+        class="days__list-of-days-item days__list-of-days-item--not-current-month"
+      >
+        
+      28
+    
+      </span>
+      <span
+        class="days__list-of-days-item days__list-of-days-item--not-current-month"
+      >
+        
+      29
+    
+      </span>
+      <span
+        class="days__list-of-days-item days__list-of-days-item--not-current-month"
+      >
+        
+      30
+    
+      </span>
+      <span
+        class="days__list-of-days-item days__list-of-days-item--not-current-month"
+      >
+        
+      31
+    
+      </span>
+       
+      <span
+        class="days__list-of-days-item"
+      >
+        
+      1
+    
+      </span>
+      <span
+        class="days__list-of-days-item"
+      >
+        
+      2
+    
+      </span>
+      <span
+        class="days__list-of-days-item"
+      >
+        
+      3
+    
+      </span>
+      <span
+        class="days__list-of-days-item"
+      >
+        
+      4
+    
+      </span>
+      <span
+        class="days__list-of-days-item"
+      >
+        
+      5
+    
+      </span>
+      <span
+        class="days__list-of-days-item days__list-of-days-item--today"
+      >
+        
+      6
+    
+      </span>
+      <span
+        class="days__list-of-days-item"
+      >
+        
+      7
+    
+      </span>
+      <span
+        class="days__list-of-days-item"
+      >
+        
+      8
+    
+      </span>
+      <span
+        class="days__list-of-days-item"
+      >
+        
+      9
+    
+      </span>
+      <span
+        class="days__list-of-days-item"
+      >
+        
+      10
+    
+      </span>
+      <span
+        class="days__list-of-days-item"
+      >
+        
+      11
+    
+      </span>
+      <span
+        class="days__list-of-days-item"
+      >
+        
+      12
+    
+      </span>
+      <span
+        class="days__list-of-days-item"
+      >
+        
+      13
+    
+      </span>
+      <span
+        class="days__list-of-days-item"
+      >
+        
+      14
+    
+      </span>
+      <span
+        class="days__list-of-days-item"
+      >
+        
+      15
+    
+      </span>
+      <span
+        class="days__list-of-days-item"
+      >
+        
+      16
+    
+      </span>
+      <span
+        class="days__list-of-days-item"
+      >
+        
+      17
+    
+      </span>
+      <span
+        class="days__list-of-days-item"
+      >
+        
+      18
+    
+      </span>
+      <span
+        class="days__list-of-days-item"
+      >
+        
+      19
+    
+      </span>
+      <span
+        class="days__list-of-days-item"
+      >
+        
+      20
+    
+      </span>
+      <span
+        class="days__list-of-days-item"
+      >
+        
+      21
+    
+      </span>
+      <span
+        class="days__list-of-days-item"
+      >
+        
+      22
+    
+      </span>
+      <span
+        class="days__list-of-days-item"
+      >
+        
+      23
+    
+      </span>
+      <span
+        class="days__list-of-days-item"
+      >
+        
+      24
+    
+      </span>
+      <span
+        class="days__list-of-days-item"
+      >
+        
+      25
+    
+      </span>
+      <span
+        class="days__list-of-days-item"
+      >
+        
+      26
+    
+      </span>
+      <span
+        class="days__list-of-days-item"
+      >
+        
+      27
+    
+      </span>
+      <span
+        class="days__list-of-days-item"
+      >
+        
+      28
+    
+      </span>
+      <span
+        class="days__list-of-days-item"
+      >
+        
+      29
+    
+      </span>
+      <span
+        class="days__list-of-days-item"
+      >
+        
+      30
+    
+      </span>
+      <span
+        class="days__list-of-days-item"
+      >
+        
+      31
+    
+      </span>
+       
+      <span
+        class="days__list-of-days-item days__list-of-days-item--not-current-month"
+      >
+        
+      1
+    
+      </span>
+      <span
+        class="days__list-of-days-item days__list-of-days-item--not-current-month"
+      >
+        
+      2
+    
+      </span>
+      <span
+        class="days__list-of-days-item days__list-of-days-item--not-current-month"
+      >
+        
+      3
+    
+      </span>
+      <span
+        class="days__list-of-days-item days__list-of-days-item--not-current-month"
+      >
+        
+      4
+    
+      </span>
+      <span
+        class="days__list-of-days-item days__list-of-days-item--not-current-month"
+      >
+        
+      5
+    
+      </span>
+    </div>
+  </div>
 </div>
 `;

@@ -55,15 +55,47 @@ exports[`ReservationForm should match snapshot when props given 1`] = `
   />
    
   <div
-    class="calendar-wrapper"
+    class="dates-input"
   >
-    <span
-      class="calendar-wrapper__dates-label"
+    <div
+      class="dates-input__label"
     >
-      Dates
-    </span>
+      
+    Dates
+  
+    </div>
      
-    <!---->
+    <div
+      class="dates-input__wrapper"
+    >
+      <input
+        class=""
+        readonly="readonly"
+      />
+       
+      <span
+        class="dates-input__arrow"
+      >
+        →
+      </span>
+       
+      <input
+        class=""
+        readonly="readonly"
+      />
+    </div>
   </div>
+   
+  <!---->
+  
+
+  {}
+
+  
+  <button
+    class="clear-button"
+  >
+    Clear
+  </button>
 </div>
 `;

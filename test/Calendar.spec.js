@@ -1,11 +1,8 @@
 import { mount } from "@vue/test-utils";
+import { advanceTo, clear } from "jest-date-mock";
+
+import Days from "~/components/Days";
 import Calendar from "@/components/Calendar.vue";
-
-// todo add to jest configuration not to add Vue.use in each case
-import Vue from 'vue';
-import VCalendar from 'v-calendar';
-
-Vue.use(VCalendar);
 
 describe("Calendar", () => {
   const requiredProps = {
@@ -20,6 +17,14 @@ describe("Calendar", () => {
     });
   };
 
+  beforeEach(() => {
+    advanceTo("2000-01-01");
+  });
+
+  afterEach(() => {
+    clear();
+  });
+
   it("is a Vue instance", () => {
     const wrapper = createWrapper();
 
@@ -32,43 +37,40 @@ describe("Calendar", () => {
     expect(wrapper.vm.$el).toMatchSnapshot();
   });
 
-  describe("computed", () => {
-    const wrapper = createWrapper();
-
-    expect(wrapper.vm.summaryInputValue).toMatchInlineSnapshot(
-      `"1/11/2020 - 1/11/2021"`
-    );
-  });
-
-  describe("mounted", () => {
-    it(`should call setDefaultRange`, () => {
-      const setDefaultRange = jest.fn();
-
-      createWrapper({ setDefaultRange });
-
-      expect(setDefaultRange).toHaveBeenCalledWith();
+  describe("data", () => {
+    it(`should prepare basic data correctly`, () => {
+      expect(Calendar.data()).toMatchInlineSnapshot(`
+        Object {
+          "month": "2000-01-01T00:00:00.000Z",
+        }
+      `);
     });
   });
 
-  describe("methods", () => {
-    it(`should set range.start and range.end based on props`, () => {
-      const wrapper = createWrapper();
+  describe("events", () => {
+    describe("startRangeChosen", () => {
+      it(`should be called when startRangeChosen event fired on Days component`, () => {
+        const wrapper = createWrapper();
 
-      wrapper.setData({
-        range: {
-          start: "2022-02-22",
-          end: "2033-03-01"
-        }
+        wrapper.vm.$emit = jest.fn();
+
+        wrapper.findComponent(Days).vm.$emit("startRangeChosen");
+
+        expect(wrapper.vm.$emit).toHaveBeenCalledWith('startRangeChosen');
       });
+    });
 
-      wrapper.vm.setDefaultRange();
+    describe("endRangeChosen", () => {
+      it(`should be called when endRangeChosen event fired on Days component`, () => {
+        const mockedData = { start: '2020-01-20' };
+        const wrapper = createWrapper();
 
-      expect(wrapper.vm.range).toMatchInlineSnapshot(`
-        Object {
-          "end": 2021-01-11T00:00:00.000Z,
-          "start": 2020-01-11T00:00:00.000Z,
-        }
-      `);
+        wrapper.vm.$emit = jest.fn();
+
+        wrapper.findComponent(Days).vm.$emit("endRangeChosen", mockedData);
+
+        expect(wrapper.vm.$emit).toHaveBeenCalledWith('endRangeChosen', mockedData);
+      });
     });
   });
 });

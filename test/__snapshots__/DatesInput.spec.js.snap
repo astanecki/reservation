@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DatesInput snapshots should match initial snapshot 1`] = `
+<div
+  class="dates-input"
+>
+  <div
+    class="dates-input__label"
+  >
+    
+    Dates
+  
+  </div>
+   
+  <div
+    class="dates-input__wrapper"
+  >
+    <input
+      class=""
+      readonly="readonly"
+    />
+     
+    <span
+      class="dates-input__arrow"
+    >
+      →
+    </span>
+     
+    <input
+      class=""
+      readonly="readonly"
+    />
+  </div>
+</div>
+`;
+
+exports[`DatesInput snapshots should match snapshot when given prop is equal to INPUT_TYPES.CHECK_IN 1`] = `
+<div
+  class="dates-input"
+>
+  <div
+    class="dates-input__label"
+  >
+    
+    Dates
+  
+  </div>
+   
+  <div
+    class="dates-input__wrapper"
+  >
+    <input
+      class="dates-input--focused"
+      readonly="readonly"
+    />
+     
+    <span
+      class="dates-input__arrow"
+    >
+      →
+    </span>
+     
+    <input
+      class=""
+      readonly="readonly"
+    />
+  </div>
+</div>
+`;
+
+exports[`DatesInput snapshots should match snapshot when given prop is equal to INPUT_TYPES.CHECK_OUT 1`] = `
+<div
+  class="dates-input"
+>
+  <div
+    class="dates-input__label"
+  >
+    
+    Dates
+  
+  </div>
+   
+  <div
+    class="dates-input__wrapper"
+  >
+    <input
+      class=""
+      readonly="readonly"
+    />
+     
+    <span
+      class="dates-input__arrow"
+    >
+      →
+    </span>
+     
+    <input
+      class="dates-input--focused"
+      readonly="readonly"
+    />
+  </div>
+</div>
+`;

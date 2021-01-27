@@ -1,12 +1,6 @@
 import { mount } from '@vue/test-utils'
 import ReservationForm from '@/components/ReservationForm.vue'
 
-// todo add to jest configuration not to add Vue.use in each case
-import Vue from 'vue';
-import VCalendar from 'v-calendar';
-
-Vue.use(VCalendar);
-
 describe('ReservationForm', () => {
   const propsData = {
     price: 298,

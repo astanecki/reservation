@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClearButton should match initial snapshot 1`] = `
+<button
+  class="clear-button"
+>
+  Clear
+</button>
+`;

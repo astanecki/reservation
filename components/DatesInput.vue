@@ -9,7 +9,6 @@
         :value="labels.checkIn"
         :class="{ 'dates-input--focused': focusedInputType === INPUT_TYPES.CHECK_IN }"
         @click="$emit('click', INPUT_TYPES.CHECK_IN)"
-        @blur="$emit('blur')"
         readonly
       />
       <span class="dates-input__arrow">&#8594;</span>
@@ -17,7 +16,6 @@
         :value="labels.checkOut"
         :class="{ 'dates-input--focused': focusedInputType === INPUT_TYPES.CHECK_OUT }"
         @click="$emit('click', INPUT_TYPES.CHECK_OUT)"
-        @blur="$emit('blur')"
         readonly
       />
     </div>
